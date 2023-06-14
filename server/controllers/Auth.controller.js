@@ -9,10 +9,11 @@ export const login = async (req, res) => {
   try {
     // Verificar si el usuario existe
     const user = await User.findOne({ email });
-    if (!user)
+    if (!user){
       return res.status(404).json({
         message: "El usuario o contraseña son incorrectos",
       });
+    }
 
     // Verificar si el usuario esta activo
     if (!user.status) {
