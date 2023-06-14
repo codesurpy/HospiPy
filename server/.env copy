@@ -1,0 +1,2 @@
+PORT=8000
+LOCAL_HOST=http://localhost:8000

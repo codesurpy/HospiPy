@@ -9,3 +9,4 @@ router.put('/users/:id/update', updateUser)
 router.delete('/users/:id/delete', deleteUser)
 router.patch('/users/:id/activate', activateUser)
 router.patch('/users/:id/deactivate', deactivateUser)
+export default router;
