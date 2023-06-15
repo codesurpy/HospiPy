@@ -1,4 +1,4 @@
-const moongose = require ('mongoose');
+import mongoose from 'mongoose'
 
 const DoctorSchema = new moongose.Schema({
     name:{
@@ -42,6 +42,6 @@ const DoctorSchema = new moongose.Schema({
     }
 
 
-},{ timestamps: true });
+},{ timestamps: true })
 
-module.exports.Doctor = moongose.model ('Doctor', DoctorSchema)
+export default mongoose.model('Doctor', DoctorSchema)
