@@ -1,14 +1,14 @@
 // Importar modelo de usuario aqui
 import bcrypt from "bcryptjs";
 import User from "../models/User.model";
-import { generateJWT } from "../utils";
+import { generateJWT } from "../utils/generateJWT.js";
 
 
 export const login = async (req, res) => {
-  const { email, password } = req.body;
+  const { document, password } = req.body;
   try {
     // Verificar si el usuario existe
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ document });
     if (!user){
       return res.status(404).json({
         message: "El usuario o contraseña son incorrectos",
