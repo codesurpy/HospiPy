@@ -14,6 +14,8 @@
 - Mariela Jara
 - Venancio Cáceres
 - Walter Díaz
+- Lucas Duarte
+- Rubén Amarilla
 
 ## Descripción del Proyecto
 
