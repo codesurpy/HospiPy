@@ -18,6 +18,11 @@ const Login = () => {
     setSectionLoaded(true)
   }, [])
 
+  {/* CREADO TEMPORALMENTE PARA PROBAR INGRESO DIRECTO A DASHBOARD */ }
+  const onClick = () => {
+    navigate("/main")
+  }
+
   // Func para enviar los datos del Login
   const sendLoginData = async (values, actions) => {
     console.log(values)
@@ -77,7 +82,9 @@ const Login = () => {
                     autoComplete='current-password'
                   />
 
+                  {/* ELIMINAR ONCLICK, TEMPORALMENTE HABILITADO PARA PRUEBA */}
                   <button
+                    onClick={onClick}
                     className='w-full mt-4 rounded-lg border border-stroke bg-blue-500 text-white py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                     type='submit'>
                     INGRESAR
