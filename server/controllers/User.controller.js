@@ -1,4 +1,6 @@
 // Importar modelo de usuario aqui
+import User from '../models/User.model.js'
+import bcrypt from "bcryptjs";
 
 export const allUsers = async (req, res) => {
     try {
@@ -29,6 +31,7 @@ export const createUser = async (req, res) => {
     const body = req.body
     try {
         const user = await User.create(body)
+        user.save()
         return res.status(201).json({
             message: 'Usuario creado con exito',
             success: true
