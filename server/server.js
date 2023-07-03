@@ -9,10 +9,7 @@ const app = express()
 dotenv.config()
 
 //middlewares
-app.use(cors({
-  credentials: true,
-  origin: process.env.LOCAL_HOST
-}))
+app.use(cors())
 app.use(express.json());
 
 //routes Addresses
