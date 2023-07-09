@@ -30,3 +30,7 @@ El Hospital Web System es un sistema diseñado para facilitar la gestión de dat
 - **Acceso Seguro**: Se implementan medidas de seguridad para garantizar la privacidad y confidencialidad de los datos de los pacientes.
 
 Este sistema web para hospitales proporciona una plataforma centralizada y segura para almacenar, gestionar y analizar datos médicos, lo que mejora la eficiencia de los procesos clínicos y facilita la toma de decisiones informadas por parte del personal médico.
+
+### Tecnlogías utilizadas en el projecto
+
+[![Project's technologies](https://skillicons.dev/icons?i=react,javascript,css,html,nodejs,vite,babel,tailwind,mongodb,git,github,vscode,figma,postman&theme=dark&perline=7)](#tecnlogías-utilizadas-en-el-projecto)
