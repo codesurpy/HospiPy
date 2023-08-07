@@ -1,18 +1,14 @@
-import mongoose from 'mongoose'
+import { Schema, model } from 'mongoose'
 
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
     name:{
         type: String,
-        required: [true, "El campo de nombre es obligatorio"],
     },
     last_name:{
         type:String,
-        required: [true, "El campo de apellido es obligatorio"],
-
     },
     email: {
         type: String,
-        required: [true, "El campo email es obligatorio"],
         validate: {
             validator: val => /^([\w-\.]+@([\w-]+\.)+[\w-]+)?$/.test(val),
             message: "Por favor introduzca una dirección de correo electrónico válida"
@@ -25,17 +21,15 @@ const userSchema = new mongoose.Schema({
     role: {
         type: Schema.Types.ObjectId,
         ref: 'Role',
-        required: true
     },
     address:{
         type:String,
-        required: [true, "El campo es obligatorio"],
     },
     phone: {
         type: String,
         required: [true, "El campo es obligatorio"],
         validate: {
-            validator: val => /^\+595\d{10}$/.test(val),
+            validator: val => /^\+595\d{9}$/.test(val),
             message: "El campo 'telefono' no tiene un formato válido para Paraguay"
         }
     },
@@ -48,9 +42,10 @@ const userSchema = new mongoose.Schema({
     },
     status:{
         type: Boolean,
+        default: true,
     }
 
 
 },{ timestamps: true })
 
-export default mongoose.model('User', userSchema)
+export default model('User', userSchema)

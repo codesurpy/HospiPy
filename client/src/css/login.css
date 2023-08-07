@@ -1,165 +1,169 @@
 .contenedor-Login {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(255, 255, 255);
-    color: black;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
 
-  }
+.cl-1-login.fade-in {
+  opacity: 1;
+}
 
-  .cl-1-login.fade-in {
-    opacity: 1;
-  }
-
-  .cl-2-login.fade-in {
-    opacity: 1;
-  }
-
-  
-  .cl-1-login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex: 6;
-    background-color: rgb(255, 255, 255);
-    opacity: 0;
-    transition: opacity 0.4s ease-in;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Agrega la sombra deseada */
-
-  }
-  
-  .cl-2-login {
-    flex: 4;
-    opacity: 0;
-    transition: opacity 0.4s ease-in;
-  }
-
-  
-  .formLogin {
-    display: flex;
-    flex-direction: column;
-    background: rgb(255, 255, 255);
-    max-width: 70vw; /* Se ajusta para ocupar el 70% de la pantalla */
-    text-align: center;
-  }
-  
-  .logoDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-
-  .logoImgLogin {
-    height: 150px;
-    margin-bottom: 40px;
-    width: auto;
-  }
-
-  .infoDivLogo{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .infoDivLogo h2{
-    font-size: 30px;
-    font-weight:bold;
-    margin-bottom: 15px;
-  }
-
-  .infoDivLogo >p{
-    font-size: 20px;
-    font-weight: 450;
-  }
-
-  .contenedor-form-login{
-    padding: 40px;
-  }
-
-  .loginFieldInputs{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .loginFieldInputs label{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-weight: bold;
-    margin: 5px;
-  }
+.cl-2-login.fade-in {
+  opacity: 1;
+}
 
 
-  .formControlLogin {
-    outline: 0;
-    background: #ffffff;
-    width: 100%;
-    border: 0;
-    border-radius: 5px;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-    border: 3px black solid;
-  }
-  
-  .formLogin span {
-    font-size: 40px;
-    margin-bottom: 25px;
-    display: block;
-  }
+.cl-1-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 6;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  /* Agrega la sombra deseada */
 
-  .formLogin p.error {
-    margin: 0 0 10px 10px;
-    text-align: left;
-    font-size: 10px;
-    color: red;
-  }
-  
-  @media (max-width: 768px) {
-    .cl-1-login,
-    .cl-2-login {
-      width: 100%;
-    }
-  }
+}
 
-  
+.cl-2-login {
+  flex: 4;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+  object-fit: cover;
+  z-index: 0;
+}
+
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  max-width: 70vw;
+  /* Se ajusta para ocupar el 70% de la pantalla */
+  text-align: center;
+}
+
+.logoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logoImgLogin {
+  height: 150px;
+  margin-bottom: 40px;
+  width: auto;
+}
+
+.infoDivLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.infoDivLogo h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.infoDivLogo>p {
+  font-size: 20px;
+  font-weight: 450;
+}
+
+.contenedor-form-login {
+  padding: 40px;
+}
+
+.loginFieldInputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.loginFieldInputs label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: bold;
+  margin: 5px;
+}
+
+
+.formControlLogin {
+  outline: 0;
+  background: #ffffff;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border: 3px black solid;
+}
+
+.formLogin span {
+  font-size: 40px;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.formLogin p.error {
+  margin: 0 0 10px 10px;
+  text-align: left;
+  font-size: 10px;
+  color: red;
+}
+
 @media (max-width: 768px) {
-    .cl-2-login {
-      display: none;
-    }
+
+  .cl-1-login,
+  .cl-2-login {
+    width: 100%;
   }
+}
 
-  @media (max-width: 768px) {
-    .contenedor-form-login {
-      padding: 0px;
-    }
+
+@media (max-width: 768px) {
+  .cl-2-login {
+    display: none;
   }
+}
+
+@media (max-width: 768px) {
+  .contenedor-form-login {
+    padding: 0px;
+  }
+}
 
 
-  @media (max-width: 768px) {
-  .infoDivLogo h2{
+@media (max-width: 768px) {
+  .infoDivLogo h2 {
     font-size: 25px;
-    font-weight:bold;
+    font-weight: bold;
     margin-bottom: 15px;
   }
 }
 
 @media (max-width: 768px) {
-  .infoDivLogo >p{
+  .infoDivLogo>p {
     font-size: 15px;
     font-weight: 450;
   }
 
 }
-  
-  @media (min-width: 769px) {
-    .contenedor-Login {
-      flex-direction: row;
-    }
+
+@media (min-width: 769px) {
+  .contenedor-Login {
+    flex-direction: row;
   }
-  
+}

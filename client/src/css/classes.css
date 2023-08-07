@@ -1,0 +1,17 @@
+/* Buttons classes */
+.btn,
+.btn-sm {
+    @apply font-medium inline-flex w-full text-blue-500 border border-transparent rounded-sm leading-snug transition duration-150 ease-in-out hover:bg-gray-200 hover:text-blue-900;
+}
+
+.btn {
+    @apply px-8 py-3;
+}
+
+.btn-sm {
+    @apply px-4 py-2;
+}
+
+.active {
+    @apply bg-gray-200 text-blue-900
+}
