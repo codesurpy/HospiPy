@@ -28,16 +28,45 @@ export const getUserById = async (req, res) => {
 }
 
 export const createUser = async (req, res) => {
-    const body = req.body
+    const { name, last_name, email, password, role, address, phone, document, status } = req.body
     try {
-        const user = await User.create(body)
-        user.save()
-        return res.status(201).json({
-            message: 'Usuario creado con exito',
-            success: true
+        User.findOne({ document: document }).then(user => {
+            if (user) {
+                return res.status(400).json({
+                    message: 'El usuario ya existe',
+                    success: false
+                })
+            } else {
+                const newUser = new User({
+                    name,
+                    last_name,
+                    email,
+                    password,
+                    role,
+                    address,
+                    phone,
+                    document,
+                    status
+                })
+                bcrypt.genSalt(10, (err, salt) => {
+                    bcrypt.hash(newUser.password, salt, (err, hash) => {
+                        newUser.password = hash
+                        newUser.save().then(user => {
+                            return res.status(201).json({
+                                message: 'Usuario creado con exito',
+                                success: true
+                            })
+                        })
+                    })
+                })
+            }
         })
     } catch (err) {
-        console.log(err)
+        console.log(err);
+        return res.status(500).json({
+            message: 'Error en el servidor',
+            success: false
+        })
     }
 }
 
